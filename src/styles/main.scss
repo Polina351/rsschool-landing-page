@@ -11,6 +11,7 @@
 
 body {
   box-sizing: border-box;
+  background: $text-inverse;
 }
 
 a {
@@ -26,4 +27,95 @@ li {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin: 20px 0;
+  height: 40px;
+}
+
+.nav {
+  &__list {
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__link {
+    @include apply-text-style("link-button");
+    position: relative;
+    &::after {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: $text-primary;
+      opacity: 0;
+      content: "";
+      transition: all 0.3s ease-out;
+    }
+    @media (hover: hover) {
+      &:hover {
+        &:hover::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.theme-switcher {
+  border: 1px solid $border-primary;
+  border-radius: 100px;
+  padding: 4px;
+  width: 88px;
+  height: 44px;
+  display: flex;
+}
+
+.header__buttons {
+  display: flex;
+  gap: 24px;
+}
+.menu-button {
+  @include apply-text-style("link-button");
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: $text-primary;
+    opacity: 0;
+    transition: width 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  @media (hover: hover) {
+    &:hover::after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
 

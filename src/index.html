@@ -5,9 +5,58 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
- <p>test run</p>
+<div class="wrapper">
+    <header class="header">
+        <a href="index.html">
+            <div class="header__logo">
+                <svg width="100" height="60" viewBox="0 0 100 60" fill="none">
+                    <use href="./assets/sprite.svg#logo"></use>
+                </svg>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Favorite coffee</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">About</a>
+                </li>            <li class="nav__item">
+                <a href="index.html" class="nav__link">Mobile app</a>
+            </li>            <li class="nav__item">
+                <a href="index.html" class="nav__link">Contact us</a>
+            </li>
+            </ul>
+        </nav>
+        <div class="header__buttons">
+            <div class="theme-switcher">
+                <div class="light">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <use href="./assets/sprite.svg#light-theme"></use>
+                    </svg>
+                </div>
+                <div class="dark">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                        <use href="./assets/sprite.svg#dark-theme"></use>
+                    </svg>
+                </div>
+            </div>
+            <a href="index.html" class="menu-button">
+                <p class="menu-button-text">Menu</p>
+                <svg class="menu-button-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <use href="./assets/sprite.svg#menu-icon"></use>
+                </svg>
+            </a>
+        </div>
+
+    </header>
+</div>
+
 </body>
 </html>
