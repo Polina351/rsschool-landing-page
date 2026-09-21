@@ -1,0 +1,103 @@
+$primary: #ff4646;
+
+$text-primary: #403f3d;
+$text-inverse: #e1d4c9;
+$text-accent: #b0907a;
+$background-page: #e1d4c9;
+$background-container: #665f55;
+$background-overlay: rgba(64, 63, 61, 0.8);
+$border-primary: #c1b6ad;
+$border-inverse: #665f55;
+$text-primary: #403f3d;
+$dark-text-primary: #e1d4c9;
+$dark-text-inverse: #e1d4c9;
+$dark-text-accent: #b0907a;
+$dark-bg-page: #292826;
+$dark-bg-container: #403f3d;
+$dark-bg-overlay: rgba(41, 40, 38, 0.8);
+$dark-border-primary: #665f55;
+$dark-border-inverse: #c1b6ad;
+$background-modal: #e1d4c9;
+$background-modalcontrol: #665f55;
+$dark-bg-modal: var($dark-bg-container);
+$dark-bg-modal-control: var($dark-bg-page);
+
+$font-family: "Inter", sans-serif;
+$second-family: "Manrope", sans-serif;
+
+$text-styles: (
+        heading-1: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 72px,
+                line-height: 105%,
+                color: var($text-primary),
+        ),
+        heading-1.accent: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-style: italic,
+                font-size: 72px,
+                line-height: 105%,
+                color: var($text-primary),
+        ),
+        heading-2: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 60px,
+                line-height: 125%,
+                color: var($text-primary),
+        ),
+        heading-2.accent: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-style: italic,
+                font-size: 60px,
+                line-height: 125%,
+                color: var($text-primary),
+        ),
+        heading-3: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 24px,
+                line-height: 125%,
+                color: var($text-primary),
+        ),
+        medium: (
+                font-family: var($font-family),
+                font-weight: 400,
+                font-size: 16px,
+l               ine-height: 150%,
+                color: var($text-primary),
+        ),
+        caption: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 10px,
+                line-height: 140%,
+                color: var($text-primary),
+        ),
+        link & button: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 16px,
+                line-height: 150%,
+                color: var($text-primary),
+        ),
+        burger-link: (
+                font-family: var($font-family),
+                font-weight: 600,
+                font-size: 32px,
+                line-height: 125%,
+                color: var($text-primary),
+        ),
+
+);
+
+$breakpoints: (
+        'xs': 320px,
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1200px
+)
