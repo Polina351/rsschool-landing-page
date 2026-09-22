@@ -311,6 +311,65 @@ li {
 .control__elem.active {
   background: #665F55;
 }
+.about {
+  margin-bottom: 100px;
+}
+.about__title {
+  color: $text_primary;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 40px;
+  .italic {
+    font-style: italic;
+    color: $text_accent;
+  }
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  > .gallery__elem {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    > div {
+      border-radius: 20px;
+    }
+    > .big {
+      width: 660px;
+      height: 590px;
+    }
+    > .small {
+      width: 660px;
+      height: 430px;
+    }
+  }
+}
+.gallery__image1 {
+  background: lightgray url("../assets/about-1.jpg") center no-repeat;
+}
+.gallery__image2 {
+  background: lightgray url("../assets/about-2.jpg") center no-repeat;
+}
+.gallery__image3 {
+  background: lightgray url("../assets/about-3.jpg") center no-repeat;
+}
+.gallery__image4 {
+  background: lightgray url("../assets/about-4.jpg") center no-repeat;
+}
+.gallery__elem {
+  div {
+    background-size: 110%;
+    transition: all 0.5s;
+    @media (hover: hover) {
+      &:hover {
+        background-size: 100%;
+      }
+    }
+  }
+}
 
 
 
