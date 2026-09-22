@@ -370,6 +370,68 @@ li {
     }
   }
 }
+.mobile-app {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  margin-bottom: 100px;
+  &__elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.mobile-app__title {
+  color: $text_primary;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  .italic {
+    font-style: italic;
+    color: $text_accent;
+  }
+}
+.mobile-app__text {
+  color: $text_primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.buttons-box {
+  display: flex;
+  gap: 20px;
+}
+.mobile-app__button {
+  display: flex;
+  width: 200px;
+  padding: 12px 20px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid $dark-border-primary;
+  color: $text_primary;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  transition: all 0.4s;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      &.mobile-app__button {
+        background-color: $background_container;
+        color: $text_inverse;
+      }
+      .app_btn_hover {
+        fill: $text_inverse;
+      }
+    }
+  }
+}
+.button__text_small {
+  font-size: 10px;
+  line-height: 140%;
+}
 
 
 
