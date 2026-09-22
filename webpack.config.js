@@ -32,6 +32,13 @@ module.exports = {
                     filename: 'assets/[name][ext]', // Копирует в папку assets без изменения имен
                 },
             },
+            {
+                test: /\.(mp4|webm|ogg|mov)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/video/[name][ext]',
+                },
+            },
         ],
     },
     plugins: [
