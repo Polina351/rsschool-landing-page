@@ -26,13 +26,13 @@ li {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
   margin: 20px 0;
   height: 40px;
 }
@@ -83,6 +83,32 @@ li {
 .header__buttons {
   display: flex;
   gap: 24px;
+}
+
+.burger_btn {
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid $background-container;
+  background-color: $text-inverse;
+}
+.burger_line {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 0;
+  border: 1.5px solid $text_primary;
+  transition: transform .3s;
+  &:nth-child(1) {
+    transform: translateY(-3.5px);
+  }
+  &:nth-child(2) {
+    transform: translateY(3.5px);
+  }
 }
 .menu-button {
   @include apply-text-style("link-button");
@@ -534,7 +560,7 @@ li {
   align-items: center;
   gap: 40px;
   .title {
-    width: 800px;
+    max-width: 800px;
     color: $text_primary;
     text-align: center;
     font-size: 60px;
@@ -686,6 +712,203 @@ li {
   }
 }
 
+//media
+@media (max-width: 1380px) {
+  .main {
+    .title {
+      max-width: 100%;
+    }
+  }
+  .card_box {
+    grid-template-columns: repeat(3, 310px);
+  }
+}
+@media (max-width: 1210px) {
+  .mobile-app {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 60px;
+    &__tittle{
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .card_box {
+    grid-template-columns: repeat(2, 310px);
+  }
+  //.card_box div:nth-child(n + 5) { //js
+  //  display: none;
+  //}
+}
+@media (max-width: 900px) {
+  .enjoy__button {
+    .cup {
+      opacity: 1;
+    }
+    .btn_text {
+      transform: translateX(-14px);
+    }
+  }
+  .enjoy__content {
+    padding: 100px 60px;
+  }
+  .btn {
+    margin: 0;
+  }
+  .gallery >.gallery__elem {
+    > .big {
+      width: 688px;
+      height: 590px;
+      background-size: auto;
+    }
+    > .small {
+      display: none;
+    }
+  }
+  .mobile-app__elem.right {
+    max-width: 630px;
+    align-self: center;
+  }
+}
+@media (max-width: 917px) {
+  .header {
+    font-size: 32px;
+    line-height: 125%;
+  }
+  .burger_btn {
+    display: flex;
+  }
+  .menu-button {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .burger_menu-box {
+    padding: 60px 40px;
+    position: absolute;
+    right: -100%;
+    top: 100px;//исправь на высоту хедера
+    width: 100%;
+    height: calc(100vh - 100px + 18vh); //написать нормально
+    //background-color: $background_body; TODO: это вернуть
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    z-index: 4;
+    transition: all 0.4s ease-out;
+  }
+  .nav-menu-box {
+    flex-grow: 0; //надо убрать flex-grow
+    &.open {
+      .burger_line:nth-child(1) {
+        transform: translateY(0)rotate(45deg);
+      }
+      .burger_line:nth-child(2) {
+        transform: translateY(0)rotate(-45deg);
+      }
+      .burger_menu-box {
+        transform: translateX(-100%);
+      }
+
+    }
+  }
+  .navigation {
+    flex-grow: 0;
+  }
+  .nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 60px;
+    flex-grow: 1;
+  }
+  .menu_cup-box > img {
+    width: 40px;
+  }
+  //.nav, .menu_link, .menu_link_home { //это убрать
+  //  display: none;
+  //}
+  .header {
+    justify-content: space-between;
+  }
+  .nav-menu-box {
+    flex-grow: 0;
+  }
+}
+@media (max-width: 690px) {
+  .enjoy__title {
+    font-size: 42px;
+    line-height: 115%;
+  }
+  .btn_left, .btn_right {
+    display: none;
+  }
+  .slider-box {
+    justify-content: center;
+  }
+  .gallery >.gallery__elem {
+    > .big {
+      width: 348px;
+      height: 590px;
+    }
+  }
+  .main {
+    .title {
+      font-size: 32px;
+    }
+  }
+  .tabs {
+    gap: 8px;
+  }
+  .card_box {
+    grid-template-columns: repeat(1, 310px);
+  }
+  .mobile-app__elem.right {
+    width: 100%;
+    align-self: center;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+  .enjoy__content { //.container_bg было
+    height: 552px;
+    padding: 60px 16px;
+    justify-content: space-between;
+  }
+  .favorite__title {
+    font-size: 32px;
+  }
+  .slide_elem {
+    width: 348px;
+  }
+  .about__title {
+    font-size: 32px;
+  }
+  .mobile-app {
+    gap: 40px;
+  }
+  .mobile-app__title {
+    font-size: 32px;
+  }
+  .buttons-box {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 60px 16px;
+    gap: 40px;
+    &__tittle{
+      font-size: 32px;
+    }
+  }
+}
 
 
 
