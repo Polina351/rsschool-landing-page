@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+:root,
+[data-theme="light"] {
+  --text-primary: #{$text-primary};
+  --text-inverse: #{$text-inverse};
+  --text-accent: #{$text-accent};
+  --background-page: #{$background-page};
+  --background-container: #{$background-container};
+  --background-overlay: #{$background-overlay};
+  --border-primary: #{$border-primary};
+  --border-inverse: #{$border-inverse};
+  --font-family: #{$font-family};
+  --second-family: #{$second-family};
+}
+
+[data-theme="dark"] {
+  --text-primary: #{$dark-text-primary};
+  --text-inverse: #{$dark-text-inverse};
+  --text-accent: #{$dark-text-accent};
+  --background-page: #{$dark-bg-page};
+  --background-container: #{$dark-bg-container};
+  --background-overlay: #{$dark-bg-overlay};
+  --border-primary: #{$dark-border-primary};
+  --border-inverse: #{$dark-border-inverse};
+}
