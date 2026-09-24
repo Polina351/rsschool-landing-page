@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'theme';
 @use 'text-styles' as *;
 @use 'media' as *;
 
@@ -11,7 +12,7 @@
 
 body {
   box-sizing: border-box;
-  background: $text-inverse;
+  background: var(--background-page);
 }
 
 a {
@@ -55,7 +56,7 @@ li {
       transform: translateX(-50%);
       width: 0;
       height: 2px;
-      background-color: $text-primary;
+      background-color: var(--text-primary);
       opacity: 0;
       content: "";
       transition: all 0.3s ease-out;
@@ -72,12 +73,13 @@ li {
 }
 
 .theme-switcher {
-  border: 1px solid $border-primary;
+  border: 1px solid var(--border-primary);
   border-radius: 100px;
   padding: 4px;
   width: 88px;
   height: 44px;
   display: flex;
+  cursor: pointer;
 }
 
 .header__buttons {
@@ -93,15 +95,15 @@ li {
   width: 44px;
   height: 44px;
   border-radius: 100px;
-  border: 1px solid $background-container;
-  background-color: $text-inverse;
+  border: 1px solid var(--background-container);
+  background-color: var(--text-inverse);
 }
 .burger_line {
   position: absolute;
   display: block;
   width: 16px;
   height: 0;
-  border: 1.5px solid $text_primary;
+  border: 1.5px solid var(--text-primary);
   transition: transform .3s;
   &:nth-child(1) {
     transform: translateY(-3.5px);
@@ -126,7 +128,7 @@ li {
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: $text-primary;
+    background-color: var(--text-primary);
     opacity: 0;
     transition: width 0.3s ease-out, opacity 0.3s ease-out;
   }
@@ -185,10 +187,10 @@ li {
   font-size: 72px;
   font-weight: 600;
   line-height: 105%;
-  color: #E1D4C9;
+  color: var(--text-inverse);
 }
 .enjoy__title .italic {
-  color: #B0907A;
+  color: var(--text-accent);
   font-style: italic;
 }
 
@@ -197,7 +199,7 @@ li {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  color: #E1D4C9;
+  color: var(--text-inverse);
 }
 
 .button-box {
@@ -222,8 +224,8 @@ li {
   align-items: center;
   border-radius: 100px;
   border-width: 0;
-  background: #E1D4C9;
-  color: #403F3D;
+  background: var(--background-page);
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -243,7 +245,7 @@ li {
 
 .favorite__title {
   margin-bottom: 40px;
-  color: #403F3D;
+  color: var(--border-primary);
   text-align: center;
   font-size: 60px;
   font-weight: 600;
@@ -251,7 +253,7 @@ li {
 }
 .favorite__title .italic {
   font-style: italic;
-  color: #B0907A;
+  color: var(--background-page);
 }
 
 .favorites {
@@ -260,7 +262,7 @@ li {
 
 .favorite__title {
   margin-bottom: 40px;
-  color: #403F3D;
+  color: var(--text-primary);
   text-align: center;
   font-size: 60px;
   font-weight: 600;
@@ -268,7 +270,7 @@ li {
 }
 .favorite__title .italic {
   font-style: italic;
-  color: #B0907A;
+  color: var(--text-accent);
 }
 
 .slider-box {
@@ -285,17 +287,17 @@ li {
   align-items: center;
   width: 60px;
   height: 60px;
-  border: 1px solid #403F3D;
+  border: 1px solid var(--text-primary);
   border-radius: 50px;
   transition: all 0.3s;
   cursor: pointer;
 }
 @media (hover: hover) {
   .btn:hover.btn {
-    background-color: #665F55;
+    background-color: var(--background-container);
   }
   .btn:hover .arrow {
-    stroke: #E1D4C9;
+    stroke: var(--text-inverse);
   }
 }
 
@@ -304,7 +306,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
   max-width: 480px;
-  color: #403F3D;
+  color: var(--text-primary);
   text-align: center;
   font-size: 24px;
   font-weight: 600;
@@ -332,23 +334,23 @@ li {
   width: 40px;
   height: 4px;
   border-radius: 100px;
-  background: #C1B6AD;
+  background: var(--border-primary);
 }
 .control__elem.active {
-  background: #665F55;
+  background: var(--background-container);
 }
 .about {
   margin-bottom: 100px;
 }
 .about__title {
-  color: $text_primary;
+  color: var(--text-primary);
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
   margin-bottom: 40px;
   .italic {
     font-style: italic;
-    color: $text_accent;
+    color: var(--text-accent);
   }
 }
 .gallery {
@@ -409,17 +411,17 @@ li {
   }
 }
 .mobile-app__title {
-  color: $text_primary;
+  color: var(--text-primary);
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
   .italic {
     font-style: italic;
-    color: $text_accent;
+    color: var(--text-accent);
   }
 }
 .mobile-app__text {
-  color: $text_primary;
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -435,8 +437,8 @@ li {
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  border: 1px solid $dark-border-primary;
-  color: $text_primary;
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -445,11 +447,11 @@ li {
   @media (hover: hover) {
     &:hover {
       &.mobile-app__button {
-        background-color: $background_container;
-        color: $text_inverse;
+        background-color: var(--background-container);
+        color: var(--text-inverse);
       }
       .app_btn_hover {
-        fill: $text_inverse;
+        fill: var(--text-inverse);
       }
     }
   }
@@ -460,14 +462,14 @@ li {
 }
 
 .footer {
-  background-color: $background_container;
+  background-color: var(--background-container);
   border-radius: 40px;
   display: flex;
   align-items: center;
   padding: 100px;
   gap: 100px;
   font-weight: 600;
-  color: $text_inverse;
+  color: var(--text-inverse);
   margin-bottom: 40px;
   &__elem {
     display: flex;
@@ -481,7 +483,7 @@ li {
 
     .italic {
       font-style: italic;
-      color: $text_accent;
+      color: var(--text-accent);
     }
   }
   &__icons{
@@ -492,7 +494,7 @@ li {
     width: 60px;
     height: 60px;
     border-radius: 100px;
-    border: 1px solid $border_inverse;
+    border: 1px solid var(--border-inverse);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -501,10 +503,10 @@ li {
     @media (hover: hover) {
       &:hover {
         &.footer__icon {
-          background-color: $border_inverse;
+          background-color: var(--border-inverse);
         }
         .btn_icon_path {
-          stroke: #403F3D;
+          stroke: var(--text-primary);
         }
       }
     }
@@ -526,7 +528,7 @@ li {
    // margin-right: 8px;
   }
   span {
-    color: $text_inverse;
+    color: var(--text-inverse);
     line-height: 150%;
   }
 }
@@ -542,7 +544,7 @@ li {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background-color: $text_inverse;
+  background-color: var(--text-inverse);
   opacity: 0;
   content: "";
   transition: all 0.5s ease-out;
@@ -561,13 +563,13 @@ li {
   gap: 40px;
   .title {
     max-width: 800px;
-    color: $text_primary;
+    color: var(--text-primary);
     text-align: center;
     font-size: 60px;
     font-weight: 600;
     line-height: 125%;
     .italic {
-      color: $text_accent;
+      color: var(--text-accent);
       font-style: italic;
     }
   }
@@ -589,7 +591,7 @@ li {
   align-items: center;
   padding: 8px 16px 8px 8px;
   border-radius: 100px;
-  border: 1px solid $border_inverse;
+  border: 1px solid var(--border-inverse);
   transition: all 0.5s;
   cursor: pointer;
   &.checked {
@@ -597,27 +599,27 @@ li {
   }
   @media (hover: hover) {
     &:hover {
-      background-color: $background_container;
-      border-color: $background_container;
+      background-color: var(--background-container);
+      border-color: var(--background-container);
 
       .tabs__icon {
-        background-color: $text_inverse;
+        background-color: var(--text-inverse);
       }
 
       .tabs__text {
-        color: $text_inverse;
+        color: var(--text-inverse);
       }
     }
   }
   &.checked {
-    background-color: $background_container;
-    border-color: $background_container;
+    background-color: var(--background-container);
+    border-color: var(--background-container);
     .tabs__icon {
-      background-color: $background_container;
-      color: $text_primary;
+      background-color: var(--background-container);
+      color: var(--text-primary);
     }
     .tabs__text {
-      color: $text_inverse;
+      color: var(--text-inverse);
     }
   }
   .tabs__icon {
@@ -627,10 +629,10 @@ li {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    //background-color: $border_light;
+    //background-color: $border-light;
   }
   .tabs__text {
-    color: $text_primary;
+    color: var(--text-primary);
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
@@ -653,7 +655,7 @@ li {
   flex-direction: column;
   align-items: center;
   border-radius: 40px;
-  border: 1px solid $border_inverse;
+  border: 1px solid var(--border-inverse);
   align-self: stretch;
   cursor: pointer;
   .description {
@@ -671,19 +673,19 @@ li {
     }
   }
   &__title {
-    color: $text_primary;
+    color: var(--text-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%
   }
   &__description {
-    color: $text_primary;
+    color: var(--text-primary);
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
   }
   &__price {
-    color: $text_primary;
+    color: var(--text-primary);
     font-size: 24px;
     font-weight: 600;
     line-height: 125%;
