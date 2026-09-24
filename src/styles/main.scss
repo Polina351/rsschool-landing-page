@@ -742,9 +742,9 @@ li {
   .card_box {
     grid-template-columns: repeat(2, 310px);
   }
-  //.card_box div:nth-child(n + 5) { //js
-  //  display: none;
-  //}
+  .card_box div:nth-child(n + 5) { //js
+    display: none;
+  }
 }
 @media (max-width: 900px) {
   .enjoy__button {
