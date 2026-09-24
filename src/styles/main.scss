@@ -75,11 +75,41 @@ li {
 .theme-switcher {
   border: 1px solid var(--border-primary);
   border-radius: 100px;
-  padding: 4px;
+  padding: 4px 10px;
   width: 88px;
   height: 44px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
+
+  .light,
+  .dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  .light {
+    color: var(--text-accent);
+    opacity: 1;
+  }
+  .dark {
+    color: var(--text-primary);
+    opacity: 0.4;
+  }
+}
+
+[data-theme="dark"] .theme-switcher {
+  .light {
+    color: var(--text-primary);
+    opacity: 0.4;
+  }
+  .dark {
+    color: var(--text-accent);
+    opacity: 1;
+  }
 }
 
 .header__buttons {
